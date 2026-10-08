@@ -19,7 +19,11 @@ y el proyecto usa [Versionado Semántico](https://semver.org/lang/es/).
 ## [1.0.0] - 2026-10-01
 
 ### Added
-- Catálogo de productos (`products`, `findProductBySku`, `searchProducts`).
-- Cálculo del total de un carrito (`calculateTotal`).
+- Catalogo de productos (`products`, `findProductBySku`, `searchProducts`).
+- Calculo del total de un carrito (`calculateTotal`).
 - Formato de precios en bolivianos (`formatPrice`).
-- CLI básica con los comandos `list` y `search`.
+HEAD
+- CLI bAsica con los comandos `list` y `search`.
+
+- CLI basica con los comandos `list` y `search`.
+ 9c8e196 (test(currency): add currency tests)

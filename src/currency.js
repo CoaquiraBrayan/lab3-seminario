@@ -5,7 +5,7 @@ export const CURRENCIES = {
 };
 
 /**
- * Obtiene la configuración de una moneda por su código.
+ * Obtiene la configuracion de una moneda por su codigo.
  * Lanza un Error si la moneda no existe.
  */
 export function getCurrency(code) {
@@ -17,7 +17,7 @@ export function getCurrency(code) {
 }
 
 /**
- * Convierte un monto según la tasa de cambio de la moneda especificada
+ * Convierte un monto segun la tasa de cambio de la moneda especificada
  * y lo redondea a 2 decimales.
  */
 export function convert(amount, code = 'BOB') {
@@ -26,3 +26,7 @@ export function convert(amount, code = 'BOB') {
   // Redondeo a 2 decimales
   return Math.round(converted * 100) / 100;
 }
+/**
+ * esto es el fix typo
+ * .
+ */
