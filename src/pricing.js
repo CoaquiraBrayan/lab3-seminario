@@ -1,4 +1,5 @@
 import { round2 } from './money.js';
+import { applyDiscount } from './discounts.js';
 
 /**
  * Calcula el total de un carrito de compras.
@@ -9,6 +10,7 @@ import { round2 } from './money.js';
  *  - Un carrito vacío vale 0.
  *
  * @param {Array<{price: number, quantity: number}>} items Ítems del carrito.
+ * @param {{discountCode?: string}} [options] Opciones para calcular el total.
  * @returns {number} Total del carrito.
  *
  * @example
@@ -18,8 +20,9 @@ import { round2 } from './money.js';
  *   { price: 25.5, quantity: 2 },
  *   { price: 40, quantity: 1 },
  * ])                                                   // 91
+ * calculateTotal([{ price: 100, quantity: 1 }], { discountCode: 'SAVE10' }) // 90
  */
-export function calculateTotal(items) {
+export function calculateTotal(items, { discountCode } = {}) {
   const subtotal = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
-  return round2(subtotal);
+  return applyDiscount(round2(subtotal), discountCode);
 }
