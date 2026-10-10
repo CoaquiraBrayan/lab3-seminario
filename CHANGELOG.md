@@ -8,7 +8,9 @@ y el proyecto usa [Versionado Semántico](https://semver.org/lang/es/).
 ## [Unreleased]
 
 ### Added
+
 - Aplicación de descuentos mediante códigos promocionales.
+- Added IVA 13% tax calculation support
 
 ### Changed
 
