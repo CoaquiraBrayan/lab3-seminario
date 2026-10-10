@@ -6,6 +6,8 @@
  *  - Siempre con dos decimales.
  *
  * @param {number} amount Monto a formatear.
+ * @param {object} options Opciones de formato.
+ * @param {number} [options.width=0] Ancho mínimo del precio.
  * @returns {string} Precio formateado.
  *
  * @example
