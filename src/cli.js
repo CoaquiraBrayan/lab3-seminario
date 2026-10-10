@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { products, searchProducts, formatPrice } from './index.js';
+import { products, searchProducts, formatPrice, buildReceipt } from './index.js';
 
 const commands = {
   list() {
@@ -18,7 +18,14 @@ const commands = {
       console.log(`${product.sku}  ${product.name}`);
     }
   },
-
+  receipt() {
+    const items = products.map(product => ({
+      name: product.name,
+      price: product.price,
+      quantity: 1,
+    }));
+    console.log(buildReceipt(items));
+  },
   // Los comandos nuevos se registran debajo de esta línea
 };
 
